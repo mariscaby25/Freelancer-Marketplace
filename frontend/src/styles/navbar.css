@@ -1,0 +1,11 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 32px;
+  background: white;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+.navbar-brand { font-weight: 800; font-size: 1.3rem; color: #4f46e5; }
+.navbar-links { display: flex; align-items: center; gap: 20px; }
+.navbar-messages { position: relative; display: flex; align-items: center; }

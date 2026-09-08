@@ -1,0 +1,25 @@
+/* Job listing & detail page tweaks beyond shared .job-* classes in index.css */
+.details-page { background: white; padding: 24px; border-radius: 10px; }
+.details-page p { line-height: 1.6; }
+
+.freelancer-avatar {
+  width: 70px;
+  height: 70px;
+  min-width: 70px;
+  min-height: 70px;
+  max-width: 70px;
+  max-height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 10px;
+}
+.freelancer-avatar-placeholder {
+  background: #4f46e5;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
