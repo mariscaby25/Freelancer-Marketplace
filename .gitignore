@@ -1,0 +1,25 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Local notes / credentials
+notepad.env
+notepad.env.txt
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Logs
+*.log
+
+# User uploads
+backend/uploads/
+
+# OS files
+.DS_Store
+Thumbs.db

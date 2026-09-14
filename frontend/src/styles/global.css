@@ -1,0 +1,9 @@
+﻿/* Shared base overrides — most base styling lives in index.css.
+   Use this file for any additional global tweaks. */
+:root {
+  --primary: #4f46e5;
+  --primary-dark: #4338ca;
+  --danger: #ef4444;
+  --success: #15803d;
+  --text-muted: #6b7280;
+}

@@ -1,0 +1,30 @@
+.page-banner {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 18px rgba(43,38,32,0.15);
+}
+.page-banner-track {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+.page-banner-slide {
+  min-width: 100%;
+  width: 100%;
+  flex-shrink: 0;
+  height: 380px;
+}
+.page-banner-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .page-banner-slide { height: 260px; }
+}
+@media (max-width: 640px) {
+  .page-banner-slide { height: 180px; }
+}

@@ -1,0 +1,110 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 32px;
+  background: white;
+  box-shadow: 0 1px 4px rgba(43,38,32,0.06);
+  border-bottom: 1px solid var(--cream-dark);
+  position: relative;
+  z-index: 100;
+}
+.navbar-brand { font-weight: 800; font-size: 1.3rem; color: var(--forest); }
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.navbar-icon-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--cream);
+  color: var(--forest);
+  font-size: 1.05rem;
+  transition: background 0.15s ease;
+}
+.navbar-icon-btn:hover { background: var(--cream-dark); }
+.navbar-icon-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  margin-left: 0;
+}
+
+.navbar-menu { position: relative; }
+.navbar-menu-trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--cream);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+.navbar-menu-trigger:hover { background: var(--cream-dark); }
+.navbar-avatar-circle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--forest);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.navbar-avatar-img {
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  min-height: 26px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.navbar-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(43,38,32,0.18);
+  border: 1px solid var(--cream-dark);
+  min-width: 210px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.navbar-dropdown a, .navbar-dropdown-logout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: var(--ink);
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+  font-family: inherit;
+}
+.navbar-dropdown a:hover, .navbar-dropdown-logout:hover { background: var(--cream); }
+.navbar-dropdown i { width: 16px; color: var(--forest); }
+.navbar-dropdown-logout { color: #a3402f; }
+.navbar-dropdown-logout i { color: #a3402f; }

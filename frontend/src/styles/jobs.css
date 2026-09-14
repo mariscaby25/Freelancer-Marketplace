@@ -1,0 +1,52 @@
+/* Job listing & detail page tweaks beyond shared .job-* classes in index.css */
+.details-page { background: white; padding: 24px; border-radius: 10px; }
+.details-page p { line-height: 1.6; }
+
+.freelancer-avatar {
+  width: 70px;
+  height: 70px;
+  min-width: 70px;
+  min-height: 70px;
+  max-width: 70px;
+  max-height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 10px;
+}
+.freelancer-avatar-placeholder {
+  background: var(--forest);
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.freelancer-field-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #e1e8de;
+  color: var(--forest-dark);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin: 0 auto 8px;
+}
+.freelancer-message-btn {
+  display: block;
+  margin-top: 14px;
+  text-align: center;
+  background: var(--forest);
+  color: var(--cream);
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.15s ease;
+}
+.freelancer-message-btn:hover {
+  background: var(--forest-dark);
+}

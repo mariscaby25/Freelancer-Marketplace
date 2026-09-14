@@ -1,0 +1,3 @@
+/* Dashboard-specific tweaks beyond the shared .dashboard-* classes in index.css */
+.dashboard-page section { margin-top: 20px; }
+.dashboard-page h2 { font-size: 1.1rem; margin-bottom: 10px; }
