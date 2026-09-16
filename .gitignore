@@ -17,8 +17,9 @@ build/
 # Logs
 *.log
 
-# User uploads
-backend/uploads/
+# User uploads — ignore actual uploaded files, but keep the folder structure
+backend/uploads/avatars/*
+!backend/uploads/avatars/.gitkeep
 
 # OS files
 .DS_Store
