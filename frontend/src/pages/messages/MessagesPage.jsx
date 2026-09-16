@@ -20,6 +20,7 @@ export default function MessagesPage() {
   const [chatLoading, setChatLoading] = useState(false);
   const [text, setText] = useState('');
   const bottomRef = useRef(null);
+  const hasLoadedChatOnce = useRef(false);
 
   const loadInbox = () => {
     messageService.getInbox().then(setInbox).finally(() => setInboxLoading(false));
@@ -31,21 +32,25 @@ export default function MessagesPage() {
     return () => clearInterval(interval);
   }, []);
 
-  const loadConversation = () => {
+  const loadConversation = (isFirstLoad = false) => {
     if (!userId) return;
-    setChatLoading(true);
+    if (isFirstLoad) setChatLoading(true);
     messageService.getConversation(userId).then((data) => {
       setMessages(data.messages);
       setOtherUser(data.otherUser);
       refreshUnreadCount();
       loadInbox();
-    }).finally(() => setChatLoading(false));
+    }).finally(() => {
+      if (isFirstLoad) setChatLoading(false);
+      hasLoadedChatOnce.current = true;
+    });
   };
 
   useEffect(() => {
     if (!userId) return;
-    loadConversation();
-    const interval = setInterval(loadConversation, 5000);
+    hasLoadedChatOnce.current = false;
+    loadConversation(true);
+    const interval = setInterval(() => loadConversation(false), 5000);
     return () => clearInterval(interval);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userId]);
@@ -111,7 +116,7 @@ export default function MessagesPage() {
             <i className="fa-solid fa-comments"></i>
             <p>Select a conversation to start chatting</p>
           </div>
-        ) : chatLoading ? (
+        ) : chatLoading && !hasLoadedChatOnce.current ? (
           <p className="page-loading">Loading...</p>
         ) : (
           <>
